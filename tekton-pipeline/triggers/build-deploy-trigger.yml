@@ -89,21 +89,21 @@ spec:
 
 ---
 
-apiVersion: traefik.containo.us/v1beta1
-kind: IngressRoute
-metadata:
-  name: tekton-argocd-example-build-el-mapping 
-  namespace: tekton-argocd-example
-spec:
-  entryPoints:
-    - websecure
-  routes:
-    - kind: Rule
-      match: Host(`argocd.mack.is`) && PathPrefix(`/tekton-argocd-example-build-mapping/`)
-      priority: 11
-      services:
-        - name: el-tekton-argocd-example-build-el
-          port: 8080
-          scheme: h2c
+#apiVersion: traefik.containo.us/v1beta1
+#kind: IngressRoute
+#metadata:
+#  name: tekton-argocd-example-build-el-mapping 
+#  namespace: tekton-argocd-example
+#spec:
+#  entryPoints:
+#    - websecure
+#  routes:
+#    - kind: Rule
+#      match: Host(`argocd.mack.is`) && PathPrefix(`/tekton-argocd-example-build-mapping/`)
+#      priority: 11
+#      services:
+#        - name: el-tekton-argocd-example-build-el
+#          port: 8080
+#          scheme: h2c
 #  tls:
 #    secretName: argocert
