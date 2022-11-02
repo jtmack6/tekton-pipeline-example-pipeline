@@ -82,8 +82,9 @@ metadata:
 spec:
   serviceAccountName: tekton-triggers-admin
   triggers:
-  - bindings:
-    - ref: tekton-argocd-example-build-git-tb
+  - name: tekton-argocd-example-listener
+    bindings:
+      - ref: tekton-argocd-example-build-git-tb
     template:
       name: tekton-argocd-example-build-tt
 
